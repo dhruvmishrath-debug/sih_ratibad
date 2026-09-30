@@ -5,6 +5,7 @@ import {
   Network, Zap, ArrowRight, Lock, PlayCircle, Globe, ExternalLink, Heart
 } from 'lucide-react';
 import Login from './Login';
+import techBharatLogo from '../assets/tech_bharat_logo.jpg';
 
 export default function LandingPage() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -71,66 +72,17 @@ export default function LandingPage() {
         </div>
 
         {/* Hero Graphic - Connected Nodes */}
-        <div style={{ flex: '1', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1, minHeight: '500px' }}>
-          <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-             {/* Center Node */}
-             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '120px', height: '120px', background: 'linear-gradient(135deg, #6366f1, #06b6d4)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 20px 40px rgba(99,102,241,0.3)', zIndex: 10 }}>
-               <div style={{ width: '80px', height: '80px', border: '2px solid rgba(255,255,255,0.5)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Activity color="white" size={40} />
-               </div>
-             </div>
-             
-             {/* Orbital Rings */}
-             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '300px', border: '1px dashed #cbd5e1', borderRadius: '50%' }}></div>
-             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '450px', height: '450px', border: '1px dashed #e2e8f0', borderRadius: '50%' }}></div>
-
-             {/* Satellite Nodes */}
-             {/* Hospital */}
-             <div style={{ position: 'absolute', top: '15%', left: '30%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '60px', height: '60px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><Building2 color="#6366f1" size={28} /></div>
-               <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Hospital</span>
-             </div>
-             
-             {/* Pharmacy */}
-             <div style={{ position: 'absolute', top: '15%', left: '70%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '60px', height: '60px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><Pill color="#10b981" size={28} /></div>
-               <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Pharmacy</span>
-             </div>
-
-             {/* Patient */}
-             <div style={{ position: 'absolute', top: '70%', left: '20%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '70px', height: '70px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><UserCircle color="#3b82f6" size={36} /></div>
-               <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Patient</span>
-             </div>
-
-             {/* AI */}
-             <div style={{ position: 'absolute', top: '65%', left: '85%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '60px', height: '60px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><Brain color="#a855f7" size={28} /></div>
-               <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>AI</span>
-             </div>
-
-             {/* Secure Records */}
-             <div style={{ position: 'absolute', top: '40%', left: '90%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '50px', height: '50px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><ShieldCheck color="#10b981" size={24} /></div>
-               <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Secure Records</span>
-             </div>
-
-             {/* QR */}
-             <div style={{ position: 'absolute', top: '85%', left: '60%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-               <div style={{ width: '50px', height: '50px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}><QrCode color="#6366f1" size={24} /></div>
-               <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)' }}>QR</span>
-             </div>
-
-             {/* Connecting Lines (SVG overlay) */}
-             <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-                <line x1="50%" y1="50%" x2="30%" y2="15%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-                <line x1="50%" y1="50%" x2="70%" y2="15%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-                <line x1="50%" y1="50%" x2="20%" y2="70%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-                <line x1="50%" y1="50%" x2="85%" y2="65%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-                <line x1="50%" y1="50%" x2="90%" y2="40%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-                <line x1="50%" y1="50%" x2="60%" y2="85%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
-             </svg>
-          </div>
+        <div style={{ flex: '1', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1, minHeight: '500px', alignItems: 'center' }}>
+          <img 
+            src={techBharatLogo} 
+            alt="Tech Bharat Logo" 
+            style={{ 
+              maxWidth: '100%', 
+              maxHeight: '500px',
+              borderRadius: '20px',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+            }} 
+          />
         </div>
       </header>
 
