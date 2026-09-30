@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { 
-  Activity, Shield, Users, BarChart3, ChevronRight, X, 
+  Activity, Shield, X, 
   Building2, Pill, UserCircle, Brain, FileText, QrCode, ShieldCheck, Ambulance,
-  Network, Zap, ArrowRight, Lock, Twitter, Youtube, Github, Linkedin, PlayCircle
+  Network, Zap, ArrowRight, Lock, PlayCircle, Globe, ExternalLink, Heart
 } from 'lucide-react';
 import Login from './Login';
 
@@ -394,10 +394,10 @@ export default function LandingPage() {
             <div>
               <h4 style={{ fontWeight: 700, marginBottom: '1.5rem' }}>Follow Us</h4>
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href="#" className="text-muted"><Linkedin size={20} /></a>
-                <a href="#" className="text-muted"><Twitter size={20} /></a>
-                <a href="#" className="text-muted"><Youtube size={20} /></a>
-                <a href="#" className="text-muted"><Github size={20} /></a>
+                <a href="#" className="text-muted"><Globe size={20} /></a>
+                <a href="#" className="text-muted"><ExternalLink size={20} /></a>
+                <a href="#" className="text-muted"><Heart size={20} /></a>
+                <a href="#" className="text-muted"><Activity size={20} /></a>
               </div>
             </div>
           </div>
